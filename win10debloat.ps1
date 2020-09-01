@@ -31,10 +31,6 @@ $tweaks = @(
 
 	### External Program Setup
 	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
-	"InstallAdobe",
-	"Install7Zip",
-	"InstallNotepadplusplus",
-	"InstallMediaPlayerClassic",
 
 	### Windows Apps
 	"DebloatAll",
@@ -122,7 +118,7 @@ $tweaks = @(
 	# "SetVisualFXPerformance",     # "SetVisualFXAppearance",
 	# "AddENKeyboard",              # "RemoveENKeyboard",
 	"EnableNumlock",             	# "DisableNumlock",
-	"EnableDarkMode",				# "DisableDarkMode",
+	"DisableDarkMode",
 	"Stop-EdgePDF",
 
 	### Explorer UI Tweaks ###
@@ -201,9 +197,9 @@ Function InstallTitusProgs {
 	./OOSU10.exe ooshutup10.cfg /quiet
 }
 
-Function InstallAdobe {
-	Write-Output "Installing Adobe Acrobat Reader"
-	choco install adobereader -y
+Function InstallVS {
+	Write-Output "Installing VS Code"
+	choco install vscode.install -y
 }
 
 Function InstallJava {
